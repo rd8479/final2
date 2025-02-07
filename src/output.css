@@ -602,6 +602,21 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-\[60\] {
+    height: 60;
+  }
+  .h-\[60vh\] {
+    height: 60vh;
+  }
+  .h-\[80\] {
+    height: 80;
+  }
+  .h-\[80vh\] {
+    height: 80vh;
+  }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
   .h-full {
     height: 100%;
   }
@@ -610,6 +625,9 @@
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-full {
     width: 100%;
@@ -639,6 +657,17 @@
   .border-0 {
     border-style: var(--tw-border-style);
     border-width: 0px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-amber-50 {
+    border-color: var(--color-amber-50);
   }
   .bg-amber-200 {
     background-color: var(--color-amber-200);
