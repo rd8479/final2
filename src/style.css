@@ -40,3 +40,6 @@
 .item:nth-child(5):hover{
     font-weight: 500;
 }
+.show_page:hover .section_item:not(:hover){
+    filter: blur(8px);
+}
