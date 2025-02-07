@@ -1,0 +1,42 @@
+.item{
+    cursor: pointer;
+    transition: 100ms;
+}
+#border{
+    transition: 500ms;
+}
+.item:nth-child(1):hover ~ #border{
+    border-bottom: 2px solid rgb(253, 253, 253);
+    left: 0;
+}
+.item:nth-child(1):hover{
+    font-weight: 500;
+}
+.item:nth-child(2):hover ~ #border{
+    border-bottom: 2px solid rgb(253, 253, 253);
+    left: 60px;
+}
+.item:nth-child(2):hover{
+    font-weight: 500;
+}
+.item:nth-child(3):hover ~ #border{
+    border-bottom: 2px solid rgb(253, 253, 253);
+    left: 120px;
+}
+.item:nth-child(3):hover{
+    font-weight: 500;
+}
+.item:nth-child(4):hover ~ #border{
+    border-bottom: 2px solid rgb(253, 253, 253);
+    left: 180px;
+}
+.item:nth-child(4):hover{
+    font-weight: 500;
+}
+.item:nth-child(5):hover ~ #border{
+    border-bottom: 2px solid rgb(253, 253, 253);
+    left: 240px;
+}
+.item:nth-child(5):hover{
+    font-weight: 500;
+}
