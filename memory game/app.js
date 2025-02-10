@@ -81,9 +81,9 @@ for (const i of boxes) {
         if(finish===8){
             setTimeout(()=>{
                 document.body.innerHTML+=`
-                    <div class="win">
-                        <p>You Win !</p>
-                    </div>
+                    <div class="win"></div>
+                    <p>You Win !</p>
+                    <button class="rest" onclick=rest()></button>
                 `
             },1000)
         }
