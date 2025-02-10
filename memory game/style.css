@@ -1,0 +1,25 @@
+.main{
+    max-width: 600px;
+    margin-inline: auto auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4px;
+}
+.box{
+    width: 150px;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f8cb74;
+}
+i.fab{
+    font-size: 3rem;
+}
+.hidden>i{
+    display: none !important;
+}
+.freez{
+    pointer-events: none;
+}
