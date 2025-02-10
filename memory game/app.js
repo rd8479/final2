@@ -1,3 +1,52 @@
+const info=[{titel:"fa-twitter",id:0}
+    ,{titel:"fa-twitter",id:0}
+    ,{titel:"fa-meta",id:0}
+    ,{titel:"fa-meta",id:0}
+    ,{titel:"fa-google",id:0}
+    ,{titel:"fa-google",id:0}
+    ,{titel:"fa-instagram",id:0}
+    ,{titel:"fa-instagram",id:0}
+    ,{titel:"fa-telegram",id:0}
+    ,{titel:"fa-telegram",id:0}
+    ,{titel:"fa-whatsapp",id:0}
+    ,{titel:"fa-whatsapp",id:0}
+    ,{titel:"fa-facebook",id:0}
+    ,{titel:"fa-facebook",id:0}
+    ,{titel:"fa-github",id:0},
+    {titel:"fa-github",id:0}];
+const root=document.body.querySelector('.main')
+function randomList(){
+    const numList=[]
+    const renderIcon=[]
+    info.map((item)=>{
+        let random=Math.floor(Math.random() * info.length);
+        if(!numList.includes(random)){
+            item.id=random
+            numList.push(random)
+            renderIcon[random]=item
+        }
+        else{
+            while(true){
+                let random=Math.floor(Math.random() * 16)
+                if(!numList.includes(random)){
+                    item.id=random
+                    numList.push(random)
+                    renderIcon[random]=item
+                    break
+                }
+            }
+        }
+    })
+    return renderIcon
+}
+const newInfo=randomList()
+function render(){
+    const section=newInfo.map((item)=>{
+        return `<div class="box"><i class="fab ${item.titel}"></i></div>`
+    }).join("")
+    root.innerHTML=section
+}
+render()
 // const boxes=document.querySelectorAll('.box')
 // const selectBox=[]
 // setTimeout(function (){
@@ -39,44 +88,3 @@
 //         i.classList.remove('freez')
 //     }
 // }
-const info=[{titel:"fa-twitter",id:0}
-    ,{titel:"fa-twitter",id:0}
-    ,{titel:"fa-meta",id:0}
-    ,{titel:"fa-meta",id:0}
-    ,{titel:"fa-google",id:0}
-    ,{titel:"fa-google",id:0}
-    ,{titel:"fa-instagram",id:0}
-    ,{titel:"fa-instagram",id:0}
-    ,{titel:"fa-telegram",id:0}
-    ,{titel:"fa-telegram",id:0}
-    ,{titel:"fa-whatsapp",id:0}
-    ,{titel:"fa-whatsapp",id:0}
-    ,{titel:"fa-facebook",id:0}
-    ,{titel:"fa-facebook",id:0}
-    ,{titel:"fa-github",id:0},
-    {titel:"fa-github",id:0}];
-const con=document.body.querySelector('.main')
-function randomNum(){
-    const numList=[]
-    const renderIcon=[]
-    info.map((item)=>{
-        let random=Math.floor(Math.random() * 16);
-        if(!numList.includes(random)){
-            item.id=random
-            numList.push(random)
-            renderIcon[random]=item
-        }
-        else{
-            while(true){
-                let random=Math.floor(Math.random() * 16)
-                if(!numList.includes(random)){
-                    item.id=random
-                    numList.push(random)
-                    renderIcon[random]=item
-                    break
-                }
-            }
-        }
-    })
-    return renderIcon
-}
