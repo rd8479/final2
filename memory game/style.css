@@ -1,3 +1,6 @@
+body{
+    background-color:#f8cb74;
+}
 .main{
     max-width: 600px;
     margin-inline: auto auto;
@@ -12,10 +15,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#f8cb74;
+    background-color:#000;
 }
 i.fab{
     font-size: 3rem;
+    color: #fff;
 }
 .hidden>i{
     display: none !important;
