@@ -39,10 +39,42 @@
 //         i.classList.remove('freez')
 //     }
 // }
+const info=[{titel:"fa-twitter",id:0}
+    ,{titel:"fa-twitter",id:0}
+    ,{titel:"fa-meta",id:0}
+    ,{titel:"fa-meta",id:0}
+    ,{titel:"fa-google",id:0}
+    ,{titel:"fa-google",id:0}
+    ,{titel:"fa-instagram",id:0}
+    ,{titel:"fa-instagram",id:0}
+    ,{titel:"fa-telegram",id:0}
+    ,{titel:"fa-telegram",id:0}
+    ,{titel:"fa-whatsapp",id:0}
+    ,{titel:"fa-whatsapp",id:0}
+    ,{titel:"fa-facebook",id:0}
+    ,{titel:"fa-facebook",id:0}
+    ,{titel:"fa-github",id:0},
+    {titel:"fa-github",id:0}];
 const con=document.body.querySelector('.main')
 function randomNum(){
-    return Math.floor(Math.random() * 16);
+    const numList=[]
+    info.map((item)=>{
+        let random=Math.floor(Math.random() * 16);
+        if(!numList.includes(random)){
+            item.id=random
+            numList.push(random)
+        }
+        else{
+            while(true){
+                let random=Math.floor(Math.random() * 16)
+                if(!numList.includes(random)){
+                    item.id=random
+                    numList.push(random)
+                    break
+                }
+            }
+        }
+    })
+    console.log(info)
 }
-function render(){
-
-}
+randomNum()
