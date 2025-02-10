@@ -49,6 +49,7 @@ function render(){
 render()
 const boxes=document.querySelectorAll('.box')
 const selectBox=[]
+let finish=0
 setTimeout(function (){
     for (const i of boxes) {
         i.classList.add('hidden')
@@ -63,10 +64,10 @@ for (const i of boxes) {
             event.target.classList.remove('hidden')
             selectBox.push(event.target)
             if(selectBox[0].innerHTML===selectBox[1].innerHTML){
-                selectBox[0].classList.add('freez')
-                selectBox[1].classList.add('freez')
-                console.log(num)
-                selectBox.length=0
+                selectBox[0].classList.add('freez');
+                selectBox[1].classList.add('freez');
+                selectBox.length=0;
+                finish+=1;
             }else{
                 freezAll()
                 setTimeout(function (){
@@ -76,6 +77,15 @@ for (const i of boxes) {
                     unfreezAll()
                 },1000)
             }
+        }
+        if(finish===8){
+            setTimeout(()=>{
+                document.body.innerHTML+=`
+                    <div class="win">
+                        <p>You Win !</p>
+                    </div>
+                `
+            },1000)
         }
     })
 }
