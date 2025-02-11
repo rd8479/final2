@@ -84,7 +84,7 @@ function gameRule(){
                     document.body.innerHTML+=`
                         <div class="win"></div>
                         <p class="p-win">You Win !</p>
-                        <button class="rest" onclick=reset()>reset</button>
+                        <button class="reset" onclick=reset()>reset</button>
                     `
                 },1000)
             }
