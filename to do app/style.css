@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.cir{
+/* .cir{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -20,7 +20,7 @@
     position: absolute;
     width: 200px;
     background-color: aqua;
-    z-index: -1;
+    z-index: -2;
 }
 .line:nth-child(1){
     top: 50%;
@@ -62,74 +62,74 @@
     left: 50%;
     transform: translate(-50%) rotate(157.5deg);
 }
-.test{
+.work-todo{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: brown;
     position: absolute;
 }
-.test:nth-child(9){
+.work-todo:nth-child(9){
     top: 140%;
     left: 40%;
 }
-.test:nth-child(10){
+.work-todo:nth-child(10){
     top: 132%;
     left: 2%;
 }
-.test:nth-child(11){
+.work-todo:nth-child(11){
     top: 110%;
     left: -30%;
 }
-.test:nth-child(12){
+.work-todo:nth-child(12){
     top: 110%;
     left: 111%;
 }
-.test:nth-child(13){
+.work-todo:nth-child(13){
     top: 80%;
     left: -51%;
 }
-.test:nth-child(14){
+.work-todo:nth-child(14){
     top: 40%;
     left: -60%;
 }
-.test:nth-child(15){
+.work-todo:nth-child(15){
     top:132%;
     left: 79%;
 }
-.test:nth-child(16){
+.work-todo:nth-child(16){
     top:0%;
     left:-52%;
 }
-.test:nth-child(17){
+.work-todo:nth-child(17){
     top:-31%;
     left:-31%;
 }
-.test:nth-child(18){
+.work-todo:nth-child(18){
     top:-52%;
     left:2%;
 }
-.test:nth-child(19){
+.work-todo:nth-child(19){
     top:-60%;
     left:40%;
 }
-.test:nth-child(20){
+.work-todo:nth-child(20){
     top:-52%;
     left:79%;
 }
-.test:nth-child(21){
+.work-todo:nth-child(21){
     top:-29%;
     left:112%;
 }
-.test:nth-child(22){
+.work-todo:nth-child(22){
     top:4%;
     left:133%;
 }
-.test:nth-child(23){
+.work-todo:nth-child(23){
     top:40%;
     left:140%;
 }
-.test:nth-child(24){
+.work-todo:nth-child(24){
     top:80%;
     left:132%;
 }
@@ -147,4 +147,34 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+} */
+ .header{
+    max-width: 1280px;
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    margin-inline:auto ;
+    padding: 12px 12px;
+    align-items: center;
+    gap: 40px;
+ }
+.title{
+    color: antiquewhite;
+    font-size: xx-large;
+}
+.text-todo{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;
+    height: 20vh;
+    padding:0 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize:none;
+}
+.text-todo::-webkit-scrollbar{
+    display: none;
 }
