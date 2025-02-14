@@ -11,6 +11,10 @@
     margin-top:100px;
     margin-inline:auto;
     position: relative;
+    animation-name: round;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
 }
 .line{
     position: absolute;
@@ -133,3 +137,7 @@
     top:117%;
     left:120%;
 }
+@keyframes round {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
