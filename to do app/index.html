@@ -15,7 +15,7 @@
     <div class="countainer">
         <div class="header">
             <div class="title">ToDo App</div>
-            <input type="text" id="test">
+            <input type="text" id="todo-date">
         </div>
         <div class="cir">
             <hr class="line">
@@ -45,8 +45,8 @@
             <div class="formi"></div>
         </div>
         <form>
-            <textarea name="todo" id="todo" placeholder="what's a plane" class="text-todo"></textarea>
-            <img src="./icons8-send-50 (1).png" alt="send" width="32px" class="send-text">
+            <textarea name="todo" id="todo-text" placeholder="what's a plane" class="text-todo"></textarea>
+            <img src="./icons8-send-50 (1).png" alt="send" width="32px" class="send-text" onclick="handleAddTodo()">
             <img src="./icons8-delete.svg" alt="delete" width="32px" class="del-text">
         </form>
     </div>
