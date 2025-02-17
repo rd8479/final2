@@ -15,7 +15,7 @@ body{
     margin-inline:auto;
     position: relative;
     animation-name: round;
-    animation-duration: 40s;
+    animation-duration: 50s;
     animation-iteration-count: infinite;
     animation-timing-function:linear;
 }
@@ -69,7 +69,7 @@ body{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: brown;
+    background-color:#FF6500;
     position: absolute;
 }
 .work-todo:nth-child(9){
@@ -141,10 +141,10 @@ body{
     to {transform: rotate(360deg);}
 }
 .formi{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background-color: blueviolet;
+    background-color:#67ECB2;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -196,4 +196,16 @@ body{
     bottom: 52px;
     right: 16px;
 
+}
+.bd-title{
+    width: 450px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.day{
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 24px !important;
+    margin-inline:4px !important;
+    margin-block: 4px !important;
 }
