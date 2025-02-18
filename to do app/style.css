@@ -4,8 +4,26 @@
     box-sizing: border-box;
 }
 body{
-    /* background-color:rgb(14,14,14) ; */
-    background-color: #d8bebe;
+    background-color:rgb(14,14,14) ;
+}
+li{
+    color: rgb(11, 6, 73);
+    border: solid 2px #FF6500;
+    margin:8px 12px;
+    padding: 4px 8px 4px 4px;
+    background-color: aliceblue;
+    list-style-type: none;
+    border-radius: 50px;
+    width: 50%;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+}
+li>span{
+    max-width: 90%;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
 }
 .countainer{
     max-width: 1500px;
@@ -66,4 +84,10 @@ body{
     margin-inline:4px !important;
     margin-block: 4px !important;
     background-color: #FF6500!important;
+}
+#section{
+    margin-top:3% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -5,7 +5,7 @@ const option={
 }
 kamaDatepicker('todo-date',option)
 
-
+const root=document.getElementById("section")
 const input = document.getElementById("todo-text");
 const inputDate=document.getElementById("todo-date")
 const todosData = JSON.parse(localStorage.getItem("todos"))
@@ -51,28 +51,22 @@ function failPlaceholder(){
     input.removeAttribute('placeholder')
 }
 function renderTodos() {
-
     localStorage.setItem("todos", JSON.stringify(todos));
 
     const template = todos.map(item => {
         return `
-        <li id="${item.id}" style="color:red">
+        <li id="${item.id}">
             <input onchange="handleChangeCheckbox(this,${item.id})" type="checkbox" ${item.isDone ? "checked" : ""} />
-            ${item.id === editableitemId ? `<input id="editInput" value="${item.title}" />` : `<span>${item.title}</span>`}
+            ${item.id === editableitemId ? `<input id="editInput" value="${item.text}" />` : `<span>${item.text}</span>`}
             <button onclick="deleteItem(${item.id})">delete</button>
             ${item.id === editableitemId ? `<button onclick="saveEdit()">save</button>` : `<button onclick="editItem(${item.id})">edit</button>`}
             
         </li>
         `
-    })
-
-    const temp = template.join("")
-
-    root.innerHTML = temp
+    }).join("")
+    root.innerHTML=template
 }
-
 renderTodos()
-
 function handleChangeCheckbox(element, id) {
     const foundIndex = todos.findIndex(item => item.id === id);
 
@@ -108,11 +102,3 @@ function deleteItem(itemId) {
     renderTodos();
 
 }
-
-function handleKeyPress(evt) {
-    if (evt.key === "Enter") {
-        handleAddTodo();
-    }
-}
-
-input.addEventListener("keypress", handleKeyPress)
