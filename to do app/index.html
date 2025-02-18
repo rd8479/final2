@@ -17,35 +17,8 @@
             <div class="title">ToDo App</div>
             <input type="text" id="todo-date">
         </div>
-        <div class="cir">
-            <hr class="line">
-            <hr class="line">
-            <hr class="line">
-            <hr class="line">
-            <hr class="line">
-            <hr class="line">
-            <hr class="line">
-            <hr class="line">
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="work-todo"></div>
-            <div class="formi"></div>
-        </div>
         <form>
-            <textarea name="todo" id="todo-text" placeholder="what's a plane" class="text-todo"></textarea>
+            <textarea name="todo" id="todo-text" placeholder="what's a plane" class="text-todo" onkeypress="changeVal(event)"></textarea>
             <img src="./icons8-send-50 (1).png" alt="send" width="32px" class="send-text" onclick="handleAddTodo()">
             <img src="./icons8-delete.svg" alt="delete" width="32px" class="del-text">
         </form>

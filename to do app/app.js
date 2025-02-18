@@ -7,8 +7,6 @@ kamaDatepicker('todo-date',option)
 
 
 
-
-// DOM nodes
 const input = document.getElementById("todo-text");
 const inputDate=document.getElementById("todo-date")
 const todosData = JSON.parse(localStorage.getItem("todos"))
@@ -31,11 +29,20 @@ function handleAddTodo() {
 
         todos.push(newTodo)
         input.value = ""
-        console.log(todos)
+        
         // renderTodos()
     }
 }
-
+function changeVal(evt){
+    if(evt.keyCode!==104){
+        if((input.value.length+1)%145===0 &&((input.value.length+1)/145)>2&&((input.value.length+1)/145)<7){
+            input.style.height=`${((input.value.length+1)/145)*3+5}vh`
+        }
+    }
+    else{
+        input.style.height=`${2*3+5}vh`
+    }
+}
 // function renderTodos() {
 
 //     localStorage.setItem("todos", JSON.stringify(todos));
