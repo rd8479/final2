@@ -7,7 +7,6 @@ const selectedGenres = [];
 
 const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-
 function render(list) {
     const template = list.map(book => {
         return `
@@ -35,12 +34,7 @@ function removeFavMain(id) {
     const foundIndex = favorites.findIndex(item => item == id);
     favorites.splice(foundIndex, 1)
     localStorage.setItem("favorites", JSON.stringify(favorites));
-    // const result = BOOKS.filter(book => favorites.includes(book.id))
-    // const result = favorites.map(favId => {
-    //     const foundIndex = BOOKS.findIndex(book => book.id === favId)
-    //     return BOOKS[foundIndex]
-    // })
-    const result = favorites.map(favId => BOOKS.find(book => book.id === favId))
+    favorites.map(favId => BOOKS.find(book => book.id === favId))
     calcFilters()
 }
 
@@ -77,12 +71,13 @@ function Exit(){
 }
 function changFav(){
     let result = [...BOOKS]
-
     if (favorites.length != 0) {
         result = result.filter(book => favorites.includes(book.id))
     }
-    renderFav(result)
-    
+    else{
+        
+    }
+    renderFav(result)  
 }
 
 function removeFav(id) {
@@ -90,11 +85,6 @@ function removeFav(id) {
     const foundIndex = favorites.findIndex(item => item == id);
     favorites.splice(foundIndex, 1)
     localStorage.setItem("favorites", JSON.stringify(favorites));
-    // const result = BOOKS.filter(book => favorites.includes(book.id))
-    // const result = favorites.map(favId => {
-    //     const foundIndex = BOOKS.findIndex(book => book.id === favId)
-    //     return BOOKS[foundIndex]
-    // })
     const result = favorites.map(favId => BOOKS.find(book => book.id === favId))
     renderFav(result)
 }
