@@ -804,6 +804,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .md\:fixed {
+    @media (width >= 48rem) {
+      position: fixed;
+    }
+  }
   .md\:sticky {
     @media (width >= 48rem) {
       position: sticky;
@@ -814,9 +819,24 @@
       top: calc(var(--spacing) * 2);
     }
   }
+  .md\:top-\[91\%\] {
+    @media (width >= 48rem) {
+      top: 91%;
+    }
+  }
+  .md\:right-\[23\%\] {
+    @media (width >= 48rem) {
+      right: 23%;
+    }
+  }
   .md\:bottom-auto {
     @media (width >= 48rem) {
       bottom: auto;
+    }
+  }
+  .md\:z-100 {
+    @media (width >= 48rem) {
+      z-index: 100;
     }
   }
   .md\:\!hidden {
@@ -829,9 +849,19 @@
       display: flex;
     }
   }
+  .md\:h-12 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 12);
+    }
+  }
   .md\:max-h-none {
     @media (width >= 48rem) {
       max-height: none;
+    }
+  }
+  .md\:w-12 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 12);
     }
   }
   .md\:w-max {
@@ -848,6 +878,26 @@
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+  }
+  .md\:justify-center {
+    @media (width >= 48rem) {
+      justify-content: center;
+    }
+  }
+  .md\:rounded-full {
+    @media (width >= 48rem) {
+      border-radius: calc(infinity * 1px);
+    }
+  }
+  .md\:bg-amber-50 {
+    @media (width >= 48rem) {
+      background-color: var(--color-amber-50);
     }
   }
   .lg\:grid-cols-4 {
