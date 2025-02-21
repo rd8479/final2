@@ -18,9 +18,9 @@ function render(list) {
             <p>اثر: ${book.author}</p>
             ${favorites.includes(book.id) ? (
 
-                `<button onclick="removeFavMain(${book.id})" class="bg-red-400 px-4 py-1 mt-4 text-white">حذف از علاقمندی ها</button>`
+                `<button onclick="removeFavMain(${book.id})" class="bg-red-400 px-4 py-1 mt-4 text-white cursor-pointer">حذف از علاقمندی ها</button>`
             ) : (
-                `<button onclick="addFav(${book.id})" class="bg-blue-400 px-4 py-1 mt-4 text-white">اضافه به علاقمندی</button>`
+                `<button onclick="addFav(${book.id})" class="bg-blue-400 px-4 py-1 mt-4 text-white cursor-pointer">اضافه به علاقمندی</button>`
             )}
         </div>
         <span class="genre">${book.genre}</span>
@@ -45,8 +45,6 @@ function removeFavMain(id) {
 }
 
 function renderFav(list) {
-    debugger;
-
     const template = list.map(book => {
         return `
         <div class="rounded-md overflow-hidden border shadow-lg relative">
