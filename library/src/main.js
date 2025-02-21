@@ -41,7 +41,7 @@ function removeFavMain(id) {
 function renderFav(list) {
     const template = list.map(book => {
         return `
-        <div class="rounded-md overflow-hidden border shadow-lg relative">
+        <div class="rounded-md overflow-hidden border shadow-lg relative bg-[#FFAB5B]">
         <img src="./image/${book.imgSrc}" width="300" alt="" class="w-full h-[300px] object-cover">
         <div class="p-4">
             <h2>${book.title}</h2>
@@ -50,7 +50,7 @@ function renderFav(list) {
         <span class="genre">${book.genre}</span>
         <span class="p-date">${book.published_date}</span>
         ${favorites.includes(book.id) ? (
-            `<button onclick="removeFav(${book.id})" class="bg-red-400 px-4 py-1 mt-4 text-white cursor-pointer">حذف از علاقمندی ها</button>`
+            `<button onclick="removeFavMain(${book.id})" class="bg-red-400 px-4 py-1 mt-4 mb-4 mr-4 text-white cursor-pointer">حذف از علاقمندی ها</button>`
         ) : (
             `<button onclick="addFav(${book.id})" class="bg-blue-400 px-4 py-1 mt-4 text-white cursor-pointer">اضافه به علاقمندی</button>`
         )}
@@ -73,11 +73,18 @@ function changFav(){
     let result = [...BOOKS]
     if (favorites.length != 0) {
         result = result.filter(book => favorites.includes(book.id))
+        renderFav(result)  
     }
     else{
-        
+        const toast=document.body.querySelector('.toast')
+        const toast_text=document.body.querySelector('.toast-text')
+        toast.classList.remove("hidden")
+        toast_text.classList.remove("hidden")
+        setTimeout(() => {
+            toast.classList.add("hidden")
+            toast_text.classList.add("hidden")
+        },3000);
     }
-    renderFav(result)  
 }
 
 function removeFav(id) {
