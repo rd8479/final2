@@ -83,7 +83,7 @@ function changFav(){
         setTimeout(() => {
             toast.classList.add("hidden")
             toast_text.classList.add("hidden")
-        },3000);
+        },4000);
     }
 }
 
