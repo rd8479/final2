@@ -131,10 +131,8 @@ function renderProductCard({ id, price, image, title }) {
                 فروش ویژه
             </div>
         `) : ""}
-    <div class="absolute p-2 rounded-full cursor-pointer top-2 left-2 bg-white shadow-xl hover:bg-red-500">
-        <img src="./public/images/icons/icons8-basket-24.png">
-    </div>
-</a>
+
+    </a>
     `
 
     return template
@@ -165,7 +163,9 @@ async function renderMainPage() {
     renderSlider(slides);
 
     sliderInterval = setInterval(() => {
-        document.getElementById("slide").remove
+        if(document.getElementById("slide")){
+            document.getElementById("slide").remove
+        }
 
         if (count === 2)
             count = 0
@@ -246,18 +246,19 @@ async function renderSingleProduct(){
 
     const template = result.map(product => {
         if (location.pathname.match(product.id)){
-            console.log(product.id)
             return renderProductCard(product);
         }
     }).join("");
 
     const container = `
-    <div class="flex">
+    <div class="grid grid-cols-4 gap-2">
         ${template}
     </div>
     `
-
     root.innerHTML = container;
+}
+function renderBasket(id){
+    
 }
 function checkState() {
     let currentAddress = location.pathname;
@@ -272,6 +273,9 @@ function checkState() {
             break;
         case (location.pathname.match(/[/]src[/]product[/][0-9]{1,}/) !== null):
             renderSingleProduct();
+            break;
+        case currentAddress === 'basket':
+            renderBasket()
             break;
         default:
             break;
