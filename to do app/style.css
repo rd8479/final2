@@ -64,12 +64,12 @@ li>span{
 .send-text{
     position: fixed;
     top:14%;
-    right:4%;
+    right:40px;
 }
 .del-text{
     position: fixed;
     top: 14%;
-    right: 1%;
+    right: 2px;
 
 }
 .bd-title{
@@ -86,7 +86,7 @@ li>span{
     background-color: #FF6500!important;
 }
 #section{
-    margin-top:3% ;
+    margin-top:72px ;
     display: flex;
     flex-direction: column;
     align-items: center;

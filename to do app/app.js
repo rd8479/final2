@@ -29,7 +29,7 @@ function handleAddTodo() {
         todos.push(newTodo)
         input.value = ""
         
-        renderTodos()
+        filterData()
     }
 }
 function changeVal(evt){
@@ -50,10 +50,10 @@ function erasTextArea(){
 function failPlaceholder(){
     input.removeAttribute('placeholder')
 }
-function renderTodos() {
+function renderTodos(date) {
     localStorage.setItem("todos", JSON.stringify(todos));
 
-    const template = todos.map(item => {
+    const template = date.map(item => {
         return `
         <li id="${item.id}">
             <input onchange="handleChangeCheckbox(this,${item.id})" type="checkbox" ${item.isDone ? "checked" : ""} />
@@ -66,12 +66,12 @@ function renderTodos() {
     }).join("")
     root.innerHTML=template
 }
-renderTodos()
+filterData()
 function handleChangeCheckbox(element, id) {
     const foundIndex = todos.findIndex(item => item.id === id);
 
     todos[foundIndex].isDone = element.checked;
-    renderTodos();
+    filterData();
 }
 
 function saveEdit() {
@@ -84,13 +84,13 @@ function saveEdit() {
 
     editableitemId = null;
 
-    renderTodos();
+    filterData();
 
 }
 
 function editItem(id) {
     editableitemId = id;
-    renderTodos();
+    filterData();
 }
 
 
@@ -99,6 +99,13 @@ function deleteItem(itemId) {
 
     todos.splice(foundIndex, 1);
 
-    renderTodos();
+    filterData();
 
+}
+function filterData(){
+    const test=todos
+    fil=test.filter(item=>{
+        return item.date===inputDate.value
+    })
+    renderTodos(fil)
 }
