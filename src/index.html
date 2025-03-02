@@ -10,17 +10,15 @@
 </head>
 <body>
     <div class="countainer">
-        <div class="header max-[1280px] bg-gray-700 w-full  flex items-center justify-between border-b-2 border-amber-50">
-            <div class="nav flex ml-16 relative">
-                <div class="item text-yellow-50 text-2xl pr-3 z-10">item</div>
-                <div class="item text-yellow-50 text-2xl pr-3 z-10">item</div>
-                <div class="item text-yellow-50 text-2xl pr-3 z-10">item</div>
-                <div class="item text-yellow-50 text-2xl pr-3 z-10">item</div>
-                <div class="item text-yellow-50 text-2xl pr-3 z-10">item</div>
-                <div class="absolute bottom-0 -left-12 w-12 h-full border-0" id="border"></div>
+        <div class="header max-[1280px] bg-gray-700 w-full  flex items-center justify-center border-b-2 border-amber-50">
+            <div class="nav flex ml-16 relative pt-4 pb-4 ">
+                <a href="/memory game/index.html" onclick="renderImage(this)" class="item text-yellow-50 md:text-xl pr-3 z-10">memory game</a>
+                <a href="/library/src/index.html" onclick="renderImage(this)" class="item text-yellow-50 md:text-xl pr-3 z-10">library</a>
+                <a href="/to do app/index.html" onclick="renderImage(this)" class="item text-yellow-50 md:text-xl pr-3 z-10">todo</a>
+                <a href="/shop/src/index.html" onclick="renderImage(this)" class="item text-yellow-50 md:text-xl pr-3 z-10">shop</a>
+                <a href="/my_project/src/index.html" onclick="renderImage(this)" class="item text-yellow-50  md:text-xl pr-3 z-10">battery</a>
+                <div onclick="renderImage(this)" class="absolute bottom-0 -left-12 w-12 h-full border-0 hidden md:flex" id="border"></div>
             </div>
-            <div class="image bg-amber-400 w-20 h-20"></div>
-            <div class="conect bg-amber-400 w-20 h-20 mr-16"></div>
             <div class="hamberger hidden">
                 <div class="icon"></div>
             </div>
@@ -28,12 +26,12 @@
         <div class="body bg-gray-700 w-full h-[100vh] flex items-center justify-center">
             <div class="show_page w-[60vw] h-[60vh] bg-gray-400 flex">
                 <div class="left_section flex w-[50%] h-full flex-col">
-                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[55%]"></div>
-                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[45%]"></div>
+                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[55%]"><img src="./src/public/memory game.png" alt="" id="img1"></div>
+                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[45%]"><img src="./src/public/library.png" alt="" id="img2"></div>
                 </div>
                 <div class="right_section flex w-[50%] h-full flex-col">
-                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[45%]"></div>
-                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[55%]"></div>
+                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[45%]"><img src="./src/public/todo.png" alt="" id="img3"></div>
+                    <div class="section_item border-2 bg-gray-900 border-gray-100 w-full h-[55%]"><img src="./src/public/shop.png" alt="" id="img4"></div>
                 </div>
             </div>
         </div>
